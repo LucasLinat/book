@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #3498db;
+}
+
+img {
+  width: 100%;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-size: 5em;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.4;
+}
+
+html {
+  --border: 1px solid #ddd;
+}
+
+.header {
+  border-bottom: var(--border);
+  padding: 2rem;
+  text-align: center;
+}
+
+.header-img {
+  width: 40px;
+}
+
+.content {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  max-width: 61rem; 
+  margin: auto;
+}
+
+.content-main {
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding: 2rem;
+  border-right: var(--border);
+}
+
+.presentation {
+  position: sticky;
+  top: 0;
+  width: 20rem;
+  padding: 2rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  font-size: .85em;
+}
+
+.presentation p + p {
+  margin-top: 1rem;
+}
+
+.menu {
+  margin-bottom: 2rem;
+}
+
+.menu a {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  text-align: center;
+  color: white;
+  background-color: #222;
+  padding: 3rem 2rem;
+  font-size: .85em;
+}
+
+.segment {
+  margin-top: 2rem;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 5em;
+  background-color: #eee;
+  transition: background-color .2s ease;
+}
+
+.list a:hover {
+  background-color: #ddd;
+}
+
+.banner {
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.list-img {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.list-img a {
+  opacity: .7;
+  transition: opacity .2s ease;
+  display: block;
+}
+
+.list-img a:hover {
+  opacity: 1;
+}
+
+.list-img img {
+  height: 5em;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 57rem), screen and (max-height: 32rem) {
+  .content {
+    flex-direction: column-reverse;
+  }
+  .presentation {
+    width: 100%;
+    position: static;
+  }
+  .menu{
+    text-align: center;
+  }
+  .menu a {
+    display: inline;
+    margin: 0 1rem;
+  }
+  .content-main {
+    width: 100%;
+    border: 0;
+  }
+  h1 {
+    font-size: 10vw;
+  }
+  .list, .list-img {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
